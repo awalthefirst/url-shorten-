@@ -2,7 +2,7 @@ extends layout
 
 block content
   .container
-    h1 FreeCodeCampe Timestamp Api 
+    h1 FreeCodeCampe Url Shortener Api 
     h3 Usage: 
     h4 Endpoint: http://fcc-shortyy.heroku.com/*
     pre
@@ -10,7 +10,7 @@ block content
       p http://fcc-shorty.heroku.com/short?s=http://google.com
       h4 Response
       |  { "original_url":"http://google.com",
-      |  "short_url":"fcc-shorty/2tx" }
+      |  "short_url":"http://fcc-shorty.heroku.com/2tx" }
     pre
       h4 Endpoint: http://fcc-shorty.heroku.com/?s=*
       p http://fcc-shorty.heroku.com/short?s=2tx 

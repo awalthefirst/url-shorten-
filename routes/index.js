@@ -32,7 +32,7 @@ router.get('/short', function (req, res, next) {
          
         res.json({
            "original_url":url,
-           "short_url":'fcc-short'+urlParse.parse(data).pathname
+           "short_url":'http://fcc-shorty.heroku.com/'+urlParse.parse(data).pathname
         }); 
          
       });
