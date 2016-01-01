@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
    }
    else {
       var url = req.query.s;
-      res.redirect('http://tinyurl.com'+url);
+      res.redirect('http://tinyurl.com/'+url);
    }
 
 });
@@ -25,11 +25,11 @@ router.get('/short', function (req, res, next) {
    var url = req.query.s || 'hhhh';
   
    if (validUrl.isUri(url)) {
-      TinyURL.shorten('http://google.com', function (data) {
+      TinyURL.shorten(url, function (data) {
          
         res.json({
            "original_url":url,
-           "short_url":'http://fcc-shorty.heroku.com?s='+urlParse.parse(data).pathname
+           "short_url":'http://fcc-shorty.heroku.com/?s='+urlParse.parse(data).pathname.replace('/','')
         }); 
          
       });
