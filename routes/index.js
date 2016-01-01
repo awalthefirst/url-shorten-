@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
    }
    else {
       var url = req.query.s;
-      res.redirect('http://tinyurl.com/'+url);
+      res.redirect('http://tinyurl.com'+url);
    }
 
 });
