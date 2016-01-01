@@ -10,14 +10,14 @@ block content
       p http://fcc-shorty.heroku.com/short?s=http://google.com
       h4 Response
       |  { "original_url":"http://google.com",
-      |  "short_url":"http://fcc-shorty.heroku.com/2tx" }
-    pre
+      |  "short_url":"http://fcc-shorty.heroku.com/?s=2tx" }
+    pre.alert.alert-success
       h4 Endpoint: http://fcc-shorty.heroku.com/?s=*
-      p http://fcc-shorty.heroku.com/short?s=2tx 
+      p http://fcc-shorty.heroku.com/?s=2tx 
       p redirect to http://google.com
       
     pre.alert.alert-danger
       h4 Error
       p http://fcc-shorty.heroku.com/short?s=http/googlecom
       h4 Response
-      {"error":true,"code":"not valid url"}
+      | {"error":true,"code":"not valid url"}
